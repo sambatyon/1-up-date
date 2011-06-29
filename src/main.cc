@@ -5,8 +5,8 @@
 
 int main(int argc, char **argv) {
   StartOneUpDateClient(1000, "test");
-  while (true)
-    Sleep(1000);
+  int i = 0;
+  
   TerminateOneUpDateClient();
   return 0;
 }

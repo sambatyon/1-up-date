@@ -61,7 +61,10 @@ bool StartOneUpDateClient(const std::size_t timeout,
 
 void TerminateOneUpDateClient(void) {
   quit_thread = true;
+  std::printf("About to set event\n");
   SetEvent(event_quit_thread);
+  std::printf("About to wait for the thread\n");
   WaitForSingleObject(thread_handle, INFINITE);
+  std::printf("Finished waiting\n");
 }
   
